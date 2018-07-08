@@ -643,6 +643,72 @@ int getCost(int cardNumber)
   return -1;
 }
 
+//Assignment2: Code Refactorization and Bug Introduction
+
+//adventurer code encapsulation/refactor + bug introduction
+void adventurerCard(struct gameState *state) {
+  int currentPlayer = whoseTurn(state);
+  int temphand[MAX_HAND];
+  int drawntreasure=0;
+  int cardDrawn;  
+  int z = 0;
+
+  while(drawntreasure<2){
+    if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
+      shuffle(currentPlayer, state);
+    }
+    drawCard(currentPlayer, state);
+    cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
+    if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+      drawntreasure++;
+    else{
+      temphand[z]=cardDrawn;
+      state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
+      z++;
+    }
+  }
+  while(z-1>=0){
+    state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
+    z=z-1;
+  }
+}
+
+//smithy code encapsulation/refactor + bug introduction
+void smithyCard(struct gameState *state, int handPos) {
+ int currentPlayer = whoseTurn(state); 
+ int i;
+ //+3 cards
+ for(i = 0; i < 4; i++) {     //bug introduced here! allow for up to 4 cards to be drawn
+    drawCard(currentPlayer, state);
+  }
+
+ //discard card from hand
+ discardCard(handPos, currentPlayer, state, 0);
+
+}
+
+//council room  encapsulation/refactor + bug introduction
+void councilRoomCard(struct gameState *state, int handPos) {
+  int currentPlayer = whoseTurn(state);
+  int i;
+  //+4 Cards
+  for (i = 0; i < 4; i++) {
+    drawCard(currentPlayer, state);
+  }
+  //+1 Buy
+  state->numBuys = state->numBuys + 2;            //bug introduced here: increase the number of buys by 2 instead of 1
+
+  //Each other player draws a card
+  for (i = 0; i < state->numPlayers; i++) {
+    if(i != currentPlayer) {
+      drawCard(i, state);
+    }
+  }
+  discardCard(handPos, currentPlayer, state, 0);
+}
+
+
+
 int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
 {
   int i;
@@ -655,9 +721,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
   int tributeRevealedCards[2] = {-1, -1};
   int temphand[MAX_HAND];// moved above the if statement
-  int drawntreasure=0;
-  int cardDrawn;
-  int z = 0;// this is the counter for the temp hand
+  //int drawntreasure=0;
+  //int cardDrawn;
+  //int z = 0;// this is the counter for the temp hand
   if (nextPlayer > (state->numPlayers - 1)){
     nextPlayer = 0;
   }
@@ -667,26 +733,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card ) 
     {
     case adventurer:
-      while(drawntreasure<2){
-	if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
-	  shuffle(currentPlayer, state);
-	}
-	drawCard(currentPlayer, state);
-	cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-	if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-	  drawntreasure++;
-	else{
-	  temphand[z]=cardDrawn;
-	  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
-	  z++;
-	}
-      }
-      while(z-1>=0){
-	state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
-	z=z-1;
-      }
-      return 0;
-			
+		 adventurerCard(state);
+	return 0;         
+	
+		
     case council_room:
       //+4 Cards
       for (i = 0; i < 4; i++)
@@ -842,7 +892,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     case village:
       //+1 Card
       drawCard(currentPlayer, state);
-			
+	  drawCard(currentPlayer, state);   //bug introduced here! addtional card will be drawn.
+		
       //+2 Actions
       state->numActions = state->numActions + 2;
 			
@@ -907,7 +958,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 			
       //+1 Actions
       state->numActions++;
-			
+      state->numActions++;    //bug introduced here! Added an extra increment to the number of actions
+	
       //discard card from hand
       discardCard(handPos, currentPlayer, state, 0);
       return 0;
