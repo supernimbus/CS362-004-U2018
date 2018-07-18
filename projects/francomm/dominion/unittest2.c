@@ -1,5 +1,5 @@
 /*********************************************************************
-** Program name: unittest1.c (Assignment 3)
+** Program name: unittest2.c (Assignment 3)
 ** Author: Mario Franco-Munoz
 ** Due Date: 4/29/2018
 ** Description: this file tests the initializeGame function.
@@ -16,6 +16,8 @@
 
 #define NOISY_TEST 1
 
+int ERROR_COUNT = 0;
+
 void customAssert(int boolIn);
 
 void customAssert(int boolIn) {
@@ -23,6 +25,7 @@ void customAssert(int boolIn) {
 		printf("TEST PASSED!\n");
 	}
 	if (boolIn == 0) {
+		ERROR_COUNT++;
 		printf("******TEST FAILED!******\n");
 	}
 }
@@ -31,6 +34,7 @@ void customAssert(int boolIn) {
 int main() {
 	int i;
 	int j;
+	int test;
     int randomSeed = 1000;
     int testReturnVal;
     int k[10] = {adventurer, council_room, feast, gardens, mine
@@ -40,8 +44,11 @@ int main() {
     int duplicateCards[10] = {adventurer, council_room, feast, gardens, mine
                , remodel, smithy, village, baron, great_hall};
 
-    struct gameState gameTest = newGame();
-    struct gameState emptyGame = newGame();
+    struct gameState gameTest;
+    struct gameState emptyGame; 
+	test = initializeGame(MAX_PLAYERS, k, randomSeed, &emptyGame);
+	customAssert(test == 0);
+
 
     int copperCounter;
     int estateCounter;
@@ -52,7 +59,7 @@ int main() {
 
     //test with greater than max players (check to make sure return value is -1)
     #if (NOISY_TEST == 1)
-    	printf("Testing to check if maximum number of player threshold works correctly...\n")
+    	printf("Testing to check if maximum number of player threshold works correctly...\n");
     #endif
     testReturnVal = initializeGame(MAX_PLAYERS + 1, k, randomSeed, &gameTest);
     customAssert(testReturnVal == -1);
@@ -68,11 +75,12 @@ int main() {
 
     //test to make sure number of players was set correctly
     #if (NOISY_TEST == 1)
-    	printf("Testing to check number of players was set correctly...\n");
+    
+	printf("Testing to check number of players was set correctly...\n");
     #endif
     for (i = 2; i <= MAX_PLAYERS; i++) {
     	initializeGame(i, k, randomSeed, &gameTest);
-    	customAssert(gameTest->numPlayers == i);
+    	customAssert(gameTest.numPlayers == i);
     	memcpy(&gameTest, &emptyGame, sizeof(struct gameState));
     }
 
@@ -83,7 +91,7 @@ int main() {
     #endif
     for (i = 2; i <= MAX_PLAYERS; i++) {
     	initializeGame(i, k, randomSeed, &gameTest);
-    	customAssert(gameTest->whoseTurn == 0);
+    	customAssert(gameTest.whoseTurn == 0);
     	memcpy(&gameTest, &emptyGame, sizeof(struct gameState));
     }	
 
@@ -102,10 +110,10 @@ int main() {
     	estateCounter = 0;
     	copperCounter = 0;
     	for (j = 0; j < 10; j++) {
-    		if (state->deck[i - 2][j] == estate) {
+    		if (gameTest.deck[i - 2][j] == estate) {
     			estateCounter++;
     		}
-    		else if (state->deck[i - 2][j] == coppers) {
+    		else if (gameTest.deck[i - 2][j] == copper) {
     			copperCounter++;
     		}
     	}
@@ -129,28 +137,24 @@ int main() {
 
     	//check great hall and gardens cards
     	#if (NOISY_TEST == 1)
-    		printf("Checking starting ammounts of great_hall and gardens cards... \n", i);
+    		printf("Checking starting ammounts of great_hall and gardens cards... (%d players) \n", i);
     	#endif
     	initializeGame(i, k, randomSeed, &gameTest);
     	if (i == 2) {
-    		customAssert(gameTest->supplyCount[great_hall] == 8 && gameTest->supplyCount[gardens] == 8);
+    		customAssert(gameTest.supplyCount[great_hall] == 8 && gameTest.supplyCount[gardens] == 8);
     	}
     	else {
-    		customAssert(gameTest->supplyCount[great_hall] == 12 && gameTest->supplyCount[gardens] == 12);
+    		customAssert(gameTest.supplyCount[great_hall] == 12 && gameTest.supplyCount[gardens] == 12);
     	}
 
    		//check everything else
    		#if (NOISY_TEST == 1)
-    		printf("Checking starting ammounts of remaining cards... \n", i);
+    		printf("Checking starting ammounts of remaining cards... (%d players)\n", i);
     	#endif
-   		for (j = adventurer; j <= treasure_map; j++) {
-   			if (j == k[0] || j == k[1] || j == k[2] || j == k[3] || j == k[4] || j == k[5] || j == k[6] || j == k[7]
-   				j == k[8] || j == k[9]) {
-   				customAssert(gameTest->supplyCount[j] == 10);
-   			}
-   			//else {
-   				//customAssert(gameTest->supplyCount[j] == 0);
-   			//}
+   		for (j = 0 ; j <= 9; j++) {
+			if (k[j] != gardens &&  k[j] != great_hall) {
+				customAssert(gameTest.supplyCount[k[j]] == 10);
+			}
    		}
     	
     	memcpy(&gameTest, &emptyGame, sizeof(struct gameState));	
@@ -168,9 +172,9 @@ int main() {
     	#if (NOISY_TEST == 1)
     		printf("Testing with %d players \n", j);
     	#endif
-    	initializeGame(j, k, randomSeed, gameTest);
+    	initializeGame(j, k, randomSeed, &gameTest);
     	for (i = 0; i < treasure_map+1; i++) {
-    		customAssert(embargoTokens[i] == 0);	
+    		customAssert(gameTest.embargoTokens[i] == 0);	
     	}
     	memcpy(&gameTest, &emptyGame, sizeof(struct gameState));
 	}
@@ -186,9 +190,9 @@ int main() {
     	#if (NOISY_TEST == 1)
     		printf("Testing with %d players \n", i);
     	#endif
-    	initializeGame(i, k, randomSeed, gameTest);
+    	initializeGame(i, k, randomSeed, &gameTest);
     	for (j = 0; j < i; j++) {
-    		customAssert(gameTest->handCount[j] == 5);
+    		customAssert(gameTest.handCount[j] == 5);
     	}
     	memcpy(&gameTest, &emptyGame, sizeof(struct gameState));
     }
@@ -202,16 +206,16 @@ int main() {
     	#if (NOISY_TEST == 1)
     		printf("Testing with %d players \n", i);
     	#endif
-    	initializeGame(i, k, randomSeed, gameTest);
-    	customAssert(gameTest->whoseTurn == 0);
+    	initializeGame(i, k, randomSeed, &gameTest);
+    	customAssert(gameTest.whoseTurn == 0);
     	memcpy(&gameTest, &emptyGame, sizeof(struct gameState));
     }
     
 
+	printf("ERROR COUNT = %d\n", ERROR_COUNT);
+    printf("*************END OF TEST RESULTS******************\n");
 
-     printf("*************END OF TEST RESULTS******************\n");
-
-    return 0
+    return 0;
 
 
 }

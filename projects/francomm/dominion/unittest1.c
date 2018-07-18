@@ -15,6 +15,8 @@
 
 #define NOISY_TEST 1
 
+int FAIL_COUNT = 0;
+
 void customAssert(int boolIn);
 
 void customAssert(int boolIn) {
@@ -22,6 +24,7 @@ void customAssert(int boolIn) {
 		printf("TEST PASSED!\n");
 	}
 	if (boolIn == 0) {
+		FAIL_COUNT++;
 		printf("******TEST FAILED!******\n");
 	}
 }
@@ -81,6 +84,7 @@ int main() {
     		
 				memset(&G, 23, sizeof(struct gameState));   // clear the game state
 				r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+				customAssert(r == 0);
 				G.handCount[p] = handCount;                 // set the number of cards on hand
 			
 				//test case 1: hand only contains copper coins
@@ -169,8 +173,9 @@ int main() {
 			}
     	}
     }
-
-    printf("*************END OF TEST RESULTS******************");
+	printf("******\n");
+	printf("Tests failed = %d\n", FAIL_COUNT);
+    printf("*************END OF TEST RESULTS******************\n");
 
 	return 0;
 }
