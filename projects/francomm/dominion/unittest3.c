@@ -14,6 +14,10 @@
 
 #define NOISY_TEST 1
 
+int ERROR_COUNT = 0;
+
+
+
 void customAssert(int boolIn);
 
 void customAssert(int boolIn) {
@@ -21,6 +25,7 @@ void customAssert(int boolIn) {
 		printf("TEST PASSED!\n");
 	}
 	if (boolIn == 0) {
+		ERROR_COUNT++;
 		printf("******TEST FAILED!******\n");
 	}
 }
@@ -32,13 +37,12 @@ int main() {
 	int k[10] = {adventurer, council_room, feast, gardens, mine
                , remodel, smithy, village, baron, great_hall};
     int i;
-    int j;
     int randomSeed = 1000;
     int checkVal;
     int temp;
 
-    struct gameState gameTest = newGame();
-    struct gameState initGame = newGame();
+    struct gameState gameTest;
+    struct gameState initGame;
 
 
     printf("******TESTING isGameOver() ******\n");
@@ -49,12 +53,12 @@ int main() {
 
 
     printf("Checking with new initialized game...\n");
-    checkVal = isGameOver(gameTest);
+    checkVal = isGameOver(&gameTest);
     customAssert(checkVal == 0);
 
     printf("Checking with empty province pile (game should be over)...\n");
-    gameTest->supplyCount[province] = 0;
-    checkVal = isGameOver(gameTest);
+    gameTest.supplyCount[province] = 0;
+    checkVal = isGameOver(&gameTest);
     customAssert(checkVal == 1);
 
 
@@ -63,45 +67,45 @@ int main() {
     for (i = 0; i < 10 ; i++) {
     	memcpy(&gameTest, &initGame, sizeof(struct gameState));
     	temp = k[i];
-    	gameTest->supplyCount[temp] = 0;
-    	checkVal = isGameOver(gameTest);
+    	gameTest.supplyCount[temp] = 0;
+    	checkVal = isGameOver(&gameTest);
     	customAssert(checkVal == 0);
     }
 
     printf("Checking with one empty coin pile (game should not be over)...\n");
     memcpy(&gameTest, &initGame, sizeof(struct gameState));
-    gameTest->supplyCount[copper] = 0;
-    checkVal = isGameOver(gameTest);
+    gameTest.supplyCount[copper] = 0;
+    checkVal = isGameOver(&gameTest);
     customAssert(checkVal == 0);
     memcpy(&gameTest, &initGame, sizeof(struct gameState));
-    gameTest->supplyCount[silver] = 0;
-    checkVal = isGameOver(gameTest);
+    gameTest.supplyCount[silver] = 0;
+    checkVal = isGameOver(&gameTest);
     customAssert(checkVal == 0);
     memcpy(&gameTest, &initGame, sizeof(struct gameState));
-    gameTest->supplyCount[gold] = 0;
-    checkVal = isGameOver(gameTest);
+    gameTest.supplyCount[gold] = 0;
+    checkVal = isGameOver(&gameTest);
     customAssert(checkVal == 0);
 
 
     printf("Checking with two piles empty (game should not be over)...\n");
     memcpy(&gameTest, &initGame, sizeof(struct gameState));
     temp = k[0];
-    gameTest->supplyCount[temp] = 0;
+    gameTest.supplyCount[temp] = 0;
     temp = k[1];
-    gameTest->supplyCount[temp] = 0;
-    checkVal = isGameOver(gameTest);
+    gameTest.supplyCount[temp] = 0;
+    checkVal = isGameOver(&gameTest);
     customAssert(checkVal == 0);
 
 
     printf("Checking with three piles empty (game should be over)...\n");
     memcpy(&gameTest, &initGame, sizeof(struct gameState));
 	temp = k[0];
-    gameTest->supplyCount[temp] = 0;
+    gameTest.supplyCount[temp] = 0;
     temp = k[1];
-    gameTest->supplyCount[temp] = 0;
+    gameTest.supplyCount[temp] = 0;
     temp = k[2];
-    gameTest->supplyCount[temp] = 0;
-    checkVal = isGameOver(gameTest);
+    gameTest.supplyCount[temp] = 0;
+    checkVal = isGameOver(&gameTest);
     customAssert(checkVal == 1);
 
     printf("*************END OF TEST RESULTS******************\n");

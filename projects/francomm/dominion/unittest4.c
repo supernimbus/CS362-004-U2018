@@ -12,7 +12,7 @@
 #include "rngs.h"
 #include <stdlib.h>
 
-
+int ERROR_COUNT = 0;
 
 void customAssert(int boolIn);
 
@@ -21,6 +21,7 @@ void customAssert(int boolIn) {
 		printf("TEST PASSED!\n");
 	}
 	if (boolIn == 0) {
+		ERROR_COUNT++;
 		printf("******TEST FAILED!******\n");
 	}
 }
@@ -34,11 +35,9 @@ int main() {
     int i;
     int j;
     int randomSeed = 1000;
-    int checkVal;
-    int temp;
 
-    struct gameState gameTest = newGame();
-    struct gameState initGame = newGame();
+    struct gameState gameTest;
+    struct gameState initGame;
 
 
      printf("******TESTING whosTurn() ******\n");
@@ -49,7 +48,7 @@ int main() {
 	for(i = 2; i <= MAX_PLAYERS; i++) {
 		memcpy(&gameTest, &initGame, sizeof(struct gameState));
 		initializeGame(i, k, randomSeed, &gameTest);
-		customAssert(whosTurn(gameTest) == 0);
+		customAssert(whoseTurn(&gameTest) == 0);
 
 	}
 
@@ -57,8 +56,8 @@ int main() {
 	printf("Checking with two players (setting second player to have next turn)...\n");
 	memcpy(&gameTest, &initGame, sizeof(struct gameState));
 	initializeGame(2, k, randomSeed, &gameTest);
-	gameTest->whosTurn = 1;
-	customAssert(whosTurn(gameTest) == 1);
+	gameTest.whoseTurn = 1;
+	customAssert(whoseTurn(&gameTest) == 1);
 
 
     //case 3: three to max players
@@ -68,12 +67,29 @@ int main() {
 		memcpy(&gameTest, &initGame, sizeof(struct gameState));
 		initializeGame(i, k, randomSeed, &gameTest);
 		for (j = 0; j < i; j++) {
-			gameTest->whosTurn = j;
-			customAssert(whosTurn(gameTest) == j);
+			gameTest.whoseTurn = j;
+			customAssert(whoseTurn(&gameTest) == j);
 		}
 	}
 
-    printf("*************END OF TEST RESULTS******************");
+	//case 4: end turn for player using endTurn() 
+	printf("Checking next turn using endTurn()...\n");
+	for (i = 2; i <= MAX_PLAYERS; i++) {
+		memcpy(&gameTest, &initGame, sizeof(struct gameState));
+		initializeGame(i, k, randomSeed, &gameTest);
+		for (j = 0; j < i; j++) {
+			endTurn(&gameTest);
+			if (j < i - 1) {
+				customAssert((whoseTurn(&gameTest) == j + 1 ));
+			}
+			else {
+				customAssert((whoseTurn(&gameTest) == 0));	
+			}		
+		}
+	}
+
+	printf("ERROR COUNT: %d\n", ERROR_COUNT);
+    printf("*************END OF TEST RESULTS******************\n");
 
 	return 0;
 }

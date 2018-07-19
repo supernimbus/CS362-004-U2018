@@ -39,6 +39,19 @@ all: playdom player unitTest1
 unitTest1: unittest1.c dominion.o rngs.o
 	gcc -o unitTest1 -g unittest1.c dominion.o rngs.o $(CFLAGS)
 
+unitTest2: unittest2.c dominion.o rngs.o
+	gcc -o unitTest2 -g unittest2.c dominion.o rngs.o $(CFLAGS)
+
+unitTest3: unittest3.c dominion.o rngs.o
+	gcc -o unitTest3 -g unittest3.c dominion.o rngs.o $(CFLAGS)
+
+unitTest4: unittest4.c dominion.o rngs.o
+	gcc -o unitTest4 -g unittest4.c dominion.o rngs.o $(CFLAGS)
+
+cardTest1: cardtest1.c dominion.o rngs.o
+	gcc - o cardTest1 -g cardtest1.c dominoin.o rngs.o $(CFLAGS)
+
+
 
 runAllTests: unitTest1
 	echo -e "Result for running dominion tests (Assignment 3):\n" > unittestresults.out
