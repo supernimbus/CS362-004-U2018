@@ -738,7 +738,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	
 		
     case council_room:
-      //+4 Cards
+		councilRoomCard(state, handPos);
+    /* 
+	 //+4 Cards
       for (i = 0; i < 4; i++)
 	{
 	  drawCard(currentPlayer, state);
@@ -758,7 +760,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 			
       //put played card in played card pile
       discardCard(handPos, currentPlayer, state, 0);
-			
+	*/		
       return 0;
 			
     case feast:
