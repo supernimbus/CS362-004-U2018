@@ -1,7 +1,7 @@
 /*********************************************************************
 ** Program name: unittest3.c (Assignment 3)
 ** Author: Mario Franco-Munoz
-** Due Date: 4/29/2018
+** Due Date: 6/22/2018
 ** Description: this file tests the isGameOver function.
 *********************************************************************/
 #include "dominion.h"
@@ -107,6 +107,8 @@ int main() {
     gameTest.supplyCount[temp] = 0;
     checkVal = isGameOver(&gameTest);
     customAssert(checkVal == 1);
+
+	printf("Error count: %d\n", ERROR_COUNT);
 
     printf("*************END OF TEST RESULTS******************\n");
 

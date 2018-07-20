@@ -1,7 +1,7 @@
 /*********************************************************************
-** Program name: cardTest1.c (Assignment 3)
+** Program name: cardTest3.c (Assignment 3)
 ** Author: Mario Franco-Munoz
-** Due Date: 4/29/2018
+** Due Date: 6/22/2018
 ** Description: this file tests the councilRoom card
 *********************************************************************/
 
@@ -140,7 +140,10 @@ int main() {
 	else {
 		customAssert(0);
 	}
-	 			
+	
+	printf("Testing to make sure it is still player 0's turn...\n");
+	customAssert(gameTest.whoseTurn == 0);
+ 			
 	
 	printf("Error count: %d\n", ERROR_COUNT);
 	printf("-------------------End of Test------------------------------------\n");

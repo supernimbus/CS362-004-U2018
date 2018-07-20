@@ -1,7 +1,7 @@
 /*********************************************************************
 ** Program name: cardTest1.c (Assignment 3)
 ** Author: Mario Franco-Munoz
-** Due Date: 4/29/2018
+** Due Date: 6/22/2018
 ** Description: this file tests the adventurer card
 *********************************************************************/
 
@@ -174,12 +174,6 @@ int main() {
 	customAssert(gameTest.handCount[0] == cards_in_hand + 2);	
 
 
-	printf("Checking that number of actions has decreased after playing Adventurer.\n");
-	memcpy(&gameTest, &emptyGame, sizeof(struct gameState));
-	gameTest.numActions = 1;
-	cardEffect(adventurer, choice1, choice2, choice3, &gameTest, handpos, &bonus);
-	customAssert(gameTest.numActions = 0);
-
 	printf("checking that state does not change for player 1 when player 0 plays card...\n");
 	memcpy(&gameTest, &emptyGame, sizeof(struct gameState));
 	int handCount2 = gameTest.handCount[1];
@@ -187,6 +181,9 @@ int main() {
 	cardEffect(adventurer, choice1, choice2, choice3, &gameTest, handpos, &bonus);
 	customAssert(handCount2 == gameTest.handCount[1]);
 	customAssert(deckCount2 == gameTest.deckCount[1]);
+
+	printf("checking to make sure it is still player 0's turn\n");
+	customAssert(gameTest.whoseTurn == 0);
 
 
 	printf("-------------------End of Test------------------------------------\n");

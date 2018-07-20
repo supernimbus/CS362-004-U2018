@@ -1,7 +1,7 @@
 /*********************************************************************
 ** Program name: unittest2.c (Assignment 3)
 ** Author: Mario Franco-Munoz
-** Due Date: 4/29/2018
+** Due Date: 6/22/2018
 ** Description: this file tests the initializeGame function.
 *********************************************************************/
 
@@ -40,9 +40,6 @@ int main() {
     int k[10] = {adventurer, council_room, feast, gardens, mine
                , remodel, smithy, village, baron, great_hall};
 
-
-    int duplicateCards[10] = {adventurer, council_room, feast, gardens, mine
-               , remodel, smithy, village, baron, great_hall};
 
     struct gameState gameTest;
     struct gameState emptyGame; 
@@ -126,7 +123,7 @@ int main() {
     //as per dominion documentation.pdf "if number of players are 2 we have 8 great hall and 8 gradens to start with
     //else we will have 12 gardens and 12 great_hall to start with. for all other cards we start with 10 cards.
     //if the card is not being used, then there should not be a pile of that card
-    int temp = 0;		//temp variable for navigating index
+   
     #if (NOISY_TEST == 1)
     	printf("Testing starting ammounts...\n");
     #endif

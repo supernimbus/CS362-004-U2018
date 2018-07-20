@@ -33,7 +33,7 @@ runtests: testDrawCard
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player unitTest1
+all: playdom player unitTest1 unitTest2 unitTest3 unitTest4 cardTest1 cardTest2 cardTest3 cardTest4
 
 
 unitTest1: unittest1.c dominion.o rngs.o
@@ -62,10 +62,17 @@ cardTest4: cardtest4.c dominion.o rngs.o
 
 
 
-runAllTests: unitTest1
+unittestresults: unitTest1 unitTest2 unitTest3 unitTest4 cardTest1 cardTest2 cardTest3 cardTest4
 	echo -e "Result for running dominion tests (Assignment 3):\n" > unittestresults.out
 	./unitTest1 >> unittestresults.out	
-	gcov -b - u dominion.c >> unittestresults.out
+	./unitTest2 >> unittestresults.out
+	./unitTest3 >> unittestresults.out
+	./unitTest4 >> unittestresults.out
+	./cardTest1 >> unittestresults.out
+	./cardTest2 >> unittestresults.out
+	./cardTest3 >> unittestresults.out
+	./cardTest4 >> unittestresults.out
+	gcov -b -u dominion.c >> unittestresults.out
 	cat dominion.c.gcov >> unittestresults.out
 
 
