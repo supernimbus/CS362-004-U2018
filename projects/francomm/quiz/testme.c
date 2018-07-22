@@ -4,11 +4,9 @@
 #include<time.h>
 
 
-#include <random.h>
-
 int COVERAGE_COMPLETED = 0;
 
-int stateTracker[8] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+int stateTracker[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 int ITERATIONS = 0;
 
@@ -19,8 +17,6 @@ char inputChar()
     int upper = 126; //tilde char    
     int lower = 32; //space char
     char out;
-    int i;
-    int covComplete = 0;
 
     int randNo = (rand() % (upper - lower +1)) + lower;
 
@@ -54,18 +50,13 @@ char inputChar()
       stateTracker[8] = 1;
     }
 
-    for (i = 0; i < sizeof(stateTracker); i++) {
-      if(stateTracker[i] == 1) {
-        covComplete = 1;
-      }
-      else {
-        covComplete = 0;
-      }
-    }
-
-    if (covComplete == 1) {
-      COVERAGE_COMPLETED = 1;
-    }
+	    
+	if (stateTracker[0] == 1 && stateTracker[1] == 1 && stateTracker[2] == 1 &&
+	stateTracker[3] == 1 && stateTracker[4] == 1 && stateTracker[5] == 1 &&
+	stateTracker[5] == 1 && stateTracker[6] == 1 && stateTracker[6] == 1 &&
+	stateTracker[7] == 1 && stateTracker[8] == 1) {
+		COVERAGE_COMPLETED = 1;
+	}
 
 
 
@@ -75,13 +66,17 @@ char inputChar()
 char *inputString()
 {
     //generate fixed lengthrandom string
-    char outStr[5];
+    //char *tempStr[5];
+    int strSize = 6;
+    char *outStr;
     int upper = 122; //lower case z    
     int lower = 97; //lower case a
     int randNo = 0;
     int i;
 
+
     //create string
+    outStr = malloc(sizeof(char) *strSize);
     for (i = 0; i < 5; i++) {
       randNo = (rand() % (upper - lower +1)) + lower;
       outStr[i] = (char)randNo;
@@ -89,11 +84,14 @@ char *inputString()
     outStr[5] = '\0';
     
     //if we have generated more than x iterations and we have achieved our coverage goal, return the key pharase
+	/*
     if (COVERAGE_COMPLETED == 1) {
-      strcpy(outStr, "reset");
+		memset(outStr, '\0', 6);
+		strcat(outStr, "reset");
     }
-    else if (COVERAGE_COMPLETED == 0 && strcmp(outStr, "reset") == 0) {
-      strcpy(outStr, "noyet");
+	*/
+    if (COVERAGE_COMPLETED == 0 && strcmp(outStr, "reset") == 0) {
+    	memset(outStr,'\0', 6);
     }
 
     return outStr;
@@ -127,8 +125,12 @@ void testme()
        && state == 9)
     {
       printf("error ");
+	  free(s);
       exit(200);
     }
+	else {
+	  free(s);
+	}
   }
 }
 
