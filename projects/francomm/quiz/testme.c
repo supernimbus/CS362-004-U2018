@@ -6,31 +6,97 @@
 
 #include <random.h>
 
-int ITERATION_COUNT = 0;
+int COVERAGE_COMPLETED = 0;
+
+int stateTracker[8] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+int ITERATIONS = 0;
 
 char inputChar()
 {
-    int randNo = rand();
+
+    //variables for generating number within desired ascii range
+    int upper = 126; //tilde char    
+    int lower = 32; //space char
+    char out;
+    int i;
+    int covComplete = 0;
+
+    int randNo = (rand() % (upper - lower +1)) + lower;
+
+    out = (char)randNo;
+
+    if (out == '[' && stateTracker[0] == 0) {
+      stateTracker[0] = 1;
+    }
+    if (out == '(' && stateTracker[1] == 0) {
+      stateTracker[1] = 1;
+    }
+    if (out == '{' && stateTracker[2] == 0) {
+      stateTracker[2] = 1;
+    }
+    if (out == ' ' && stateTracker[3] == 0) {
+      stateTracker[3] = 1;
+    }
+    if (out == 'a' && stateTracker[4] == 0) {
+      stateTracker[4] = 1;
+    }
+    if (out == 'x' && stateTracker[5] == 0) {
+      stateTracker[5] = 1;
+    }
+    if (out == '}' && stateTracker[6] == 0) {
+      stateTracker[6] = 1;
+    }
+    if (out == ')' && stateTracker[7] == 0) {
+      stateTracker[7] = 1;
+    }
+    if (out == ']' && stateTracker[8] == 0) {
+      stateTracker[8] = 1;
+    }
+
+    for (i = 0; i < sizeof(stateTracker); i++) {
+      if(stateTracker[i] == 1) {
+        covComplete = 1;
+      }
+      else {
+        covComplete = 0;
+      }
+    }
+
+    if (covComplete == 1) {
+      COVERAGE_COMPLETED = 1;
+    }
 
 
 
-
-
-
-    return ' ';
+    return out;
 }
 
 char *inputString()
 {
-    //generate random string
+    //generate fixed lengthrandom string
+    char outStr[5];
+    int upper = 122; //lower case z    
+    int lower = 97; //lower case a
+    int randNo = 0;
+    int i;
 
-
-    //if we have generated more than x iterations, return the key pharase
+    //create string
+    for (i = 0; i < 5; i++) {
+      randNo = (rand() % (upper - lower +1)) + lower;
+      outStr[i] = (char)randNo;
+    }
+    outStr[5] = '\0';
     
+    //if we have generated more than x iterations and we have achieved our coverage goal, return the key pharase
+    if (COVERAGE_COMPLETED == 1) {
+      strcpy(outStr, "reset");
+    }
+    else if (COVERAGE_COMPLETED == 0 && strcmp(outStr, "reset") == 0) {
+      strcpy(outStr, "noyet");
+    }
 
-
-
-    return "";
+    return outStr;
 }
 
 void testme()
