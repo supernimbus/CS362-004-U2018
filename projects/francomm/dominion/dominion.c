@@ -738,6 +738,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	
 		
     case council_room:
+      councilRoomCard(state, handPos);
+    /*
       //+4 Cards
       for (i = 0; i < 4; i++)
 	{
@@ -758,7 +760,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 			
       //put played card in played card pile
       discardCard(handPos, currentPlayer, state, 0);
-			
+			*/
       return 0;
 			
     case feast:
@@ -879,6 +881,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case smithy:
+      smithyCard(state, handPos);
+    /*
       //+3 Cards
       for (i = 0; i < 3; i++)
 	{
@@ -899,6 +903,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 			
       //discard played card from hand
       discardCard(handPos, currentPlayer, state, 0);
+      */
       return 0;
 		
     case baron:
