@@ -1,4 +1,4 @@
-CFLAGS = -Wall -fpic -coverage -lm
+CFLAGS = -Wall -fpic -coverage -lm -std=c99
 
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
@@ -33,34 +33,9 @@ runtests: testDrawCard
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player unitTest1 unitTest2 unitTest3 unitTest4 cardTest1 cardTest2 cardTest3 cardTest4
+all: playdom player random_cardTest1 random_cardTest2 random_cardTest3
 
 
-<<<<<<< HEAD
-unitTest1: unittest1.c dominion.o rngs.o
-	gcc -o unitTest1 -g unittest1.c dominion.o rngs.o $(CFLAGS)
-
-unitTest2: unittest2.c dominion.o rngs.o
-	gcc -o unitTest2 -g unittest2.c dominion.o rngs.o $(CFLAGS)
-
-unitTest3: unittest3.c dominion.o rngs.o
-	gcc -o unitTest3 -g unittest3.c dominion.o rngs.o $(CFLAGS)
-
-unitTest4: unittest4.c dominion.o rngs.o
-	gcc -o unitTest4 -g unittest4.c dominion.o rngs.o $(CFLAGS)
-
-cardTest1: cardtest1.c dominion.o rngs.o
-	gcc -o cardTest1 -g cardtest1.c dominion.o rngs.o $(CFLAGS)
-
-cardTest2: cardtest2.c dominion.o rngs.o
-	gcc -o cardTest2 -g cardtest2.c dominion.o rngs.o $(CFLAGS)
-
-cardTest3: cardtest3.c dominion.o rngs.o
-	gcc -o cardTest3 -g cardtest3.c dominion.o rngs.o $(CFLAGS)
-
-cardTest4: cardtest4.c dominion.o rngs.o
-	gcc -o cardTest4 -g cardtest4.c dominion.o rngs.o $(CFLAGS)
-=======
 random_cardTest1: randomtestcard1.c dominion.o rngs.o
 	gcc -o cardTest1 -g randomtestcard1.c dominion.o rngs.o $(CFLAGS)
 
@@ -69,31 +44,24 @@ random_cardTest2: randomtestcard2.c dominion.o rngs.o
 
 random_cardTest3: randomtestadventurer.c dominion.o rngs.o
 	gcc -o cardTest3 -g randomtestadventurer.c dominion.o rngs.o $(CFLAGS)
->>>>>>> 4a890388305bf0b7e936b1274aafde2e747243c7
 
 
 
-unittestresults: unitTest1 unitTest2 unitTest3 unitTest4 cardTest1 cardTest2 cardTest3 cardTest4
-<<<<<<< HEAD
-	echo -e "Result for running dominion tests (Assignment 3):\n" > unittestresults.out
-	./unitTest1 >> unittestresults.out	
-	./unitTest2 >> unittestresults.out
-	./unitTest3 >> unittestresults.out
-	./unitTest4 >> unittestresults.out
-	./cardTest1 >> unittestresults.out
-	./cardTest2 >> unittestresults.out
-	./cardTest3 >> unittestresults.out
-	./cardTest4 >> unittestresults.out
-=======
+unittestresults: cardTest1 cardTest2 cardTest3
 	echo -e "Result for running random card tests (Assignment 4):\n" > unittestresults.out
 	
 	./cardTest1 >> unittestresults.out
+	gcov randomtestcard1.c >> randomtestcard1.out
+	gcov -b -u dominion.c >> randomtestcard1.out
+	cat dominion.c.gcov >> randomtestcard1.out
 	./cardTest2 >> unittestresults.out
+	gcov randomtestcard2.c >> randomtestcard2.out
+	gcov -b -u dominion.c >> randomtestcard2.out
+	cat dominion.c.gcov >> randomtestcard2.out
 	./cardTest3 >> unittestresults.out
-
->>>>>>> 4a890388305bf0b7e936b1274aafde2e747243c7
-	gcov -b -u dominion.c >> unittestresults.out
-	cat dominion.c.gcov >> unittestresults.out
+	gcov randomtestadventurer.c >> randomtestadventurer.out
+	gcov -b -u dominion.c >> randomtestadventurer.out
+	cat dominion.c.gcov >> randomtestadventurer.out
 
 
 clean:

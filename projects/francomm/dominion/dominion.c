@@ -738,39 +738,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	
 		
     case council_room:
-<<<<<<< HEAD
 		councilRoomCard(state, handPos);
-    /* 
-	 //+4 Cards
-=======
-      councilRoomCard(state, handPos);
-    /*
-      //+4 Cards
->>>>>>> 4a890388305bf0b7e936b1274aafde2e747243c7
-      for (i = 0; i < 4; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-			
-      //+1 Buy
-      state->numBuys++;
-			
-      //Each other player draws a card
-      for (i = 0; i < state->numPlayers; i++)
-	{
-	  if ( i != currentPlayer )
-	    {
-	      drawCard(i, state);
-	    }
-	}
-			
-      //put played card in played card pile
-      discardCard(handPos, currentPlayer, state, 0);
-<<<<<<< HEAD
-	*/		
-=======
-			*/
->>>>>>> 4a890388305bf0b7e936b1274aafde2e747243c7
+
       return 0;
 			
     case feast:
@@ -891,22 +860,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case smithy:
-<<<<<<< HEAD
+
 		smithyCard(state, handPos);
-	/*
-=======
-      smithyCard(state, handPos);
-    /*
->>>>>>> 4a890388305bf0b7e936b1274aafde2e747243c7
-      //+3 Cards
-      for (i = 0; i < 3; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-    */ 
 	 return 0;
 		
     case village:
@@ -919,7 +874,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 			
       //discard played card from hand
       discardCard(handPos, currentPlayer, state, 0);
-      */
+      
       return 0;
 		
     case baron:

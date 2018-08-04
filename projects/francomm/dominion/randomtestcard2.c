@@ -69,7 +69,7 @@ int main() {
 	for (int i = 0; i < testCount; i++) {
 		testErrorCounts[i] = 0;
 	}
-
+	errorCheck = 0;
 
 	//initialize seed
 	srand(time(0));
@@ -91,32 +91,33 @@ int main() {
 			for(int k = 0; k < deckSize; k++) {
 				initGame.deck[j][k] = baron;
 			}
-			initGame.deckCount[j][k] = baron;
+			initGame.deckCount[j] = deckSize;
 		}
 
 
 		memcpy(&gameTest, &initGame, sizeof(struct gameState));
 
 		//check to make sure that player gets 4 cards and 1 extra buy
-		int hand_prev = gameTest.handCount[0];
-		int deck_prev = gameTest.deckCount[0];
+		int hand_prev = initGame.handCount[0];
+		int deck_prev = initGame.deckCount[0];
 		cardEffect(council_room, choice1, choice2, choice3, &gameTest, handpos, &bonus);
 
 		//Test 1: check that active player's deck count decreased
 		errorCheck = customAssert((gameTest.deckCount[0] + 4) == deck_prev);
-		if (errorCheck == 1) {
+		
+		if (errorCheck != 0) {
 			testErrorCounts[0]++;
 		}
 
 		//Test 2: check that active player's hadn count increased
 		errorCheck = customAssert(gameTest.handCount[0] == (hand_prev + 3));
-		if (errorCheck == 1) {
+		if (errorCheck != 0) {
 			testErrorCounts[1]++;
 		}
 
 		//Test 3: check that active player gets an extra buy
 		errorCheck = customAssert((gameTest.numBuys + 1) == initGame.numBuys);
-		if (errorCheck == 1) {
+		if (errorCheck != 0) {
 			testErrorCounts[2]++;
 		}
 
@@ -146,7 +147,7 @@ int main() {
 
 
 		//Test 6: test that it is still player 0's turn.
-		errorCount = customAssert(gameTest.whosTurn == 0);
+		errorCheck = customAssert(gameTest.whoseTurn == 0);
 		if (errorCheck == 1) {
 			testErrorCounts[5]++;
 		}
@@ -161,7 +162,7 @@ int main() {
 	printf("Active player deck count errors: %d\n", testErrorCounts[0]);
 	printf("Active player hand count errors: %d\n", testErrorCounts[1]);
 	printf("Active player extra buy errors: %d\n", testErrorCounts[2]);
-	printf("Other players hand and/or deck count errors: %d", testErrorCounts[3]);
+	printf("Other players hand and/or deck count errors: %d\n", testErrorCounts[3]);
 	printf("Discard pile errors: %d\n", testErrorCounts[4]);
 	printf("Change of turn error: %d\n", testErrorCounts[5]);
 

@@ -16,6 +16,8 @@
 #include "rngs.h"
 
 #define TESTCARD "adventurer"
+int ERROR_COUNT = 0;
+
 
 int randomInt(int, int);
 int customAssert(int boolIn);
@@ -30,13 +32,6 @@ int customAssert(int boolIn) {
 		ERROR_COUNT++;
 		return 1;
 	}
-
-}
-
-//Function to create a random integer using rand(). Lower and upper bounds are inclusive.
-//output is a pseudo random number in the specified range.
-int randomInt(int low, int high) {
-	return (rand() % (high - low + 1)) + low;
 
 }
 
@@ -84,8 +79,12 @@ int main() {
 	int testErrorCounts[testCount];
 	int treasureCard[3] = {copper, silver, gold};
 
+	for (int i = 0; i < testCount; i++) {
+		testErrorCounts[i] = 0;
+	}
 
-	for (p = 0; p < iterationCount; p++) {
+
+	for (int p = 0; p < iterationCount; p++) {
 		players = randomInt(2, MAX_PLAYERS);
 		initializeGame(players, k, randomSeed, &emptyGame);
 
@@ -160,7 +159,7 @@ int main() {
 		gameTest.deck[0][0] = copper;
 		gameTest.deck[0][1] = silver;
 		cardEffect(adventurer, choice1, choice2, choice3, &gameTest, handpos, &bonus);
-		if (customAssert((gameTest.deckCount[0] + gameTest.discardCount[0]) == (cards_in_deck + cards_in_discard - 2))==1){
+		if (customAssert((gameTest.deckCount[0] + gameTest.discardCount[0]) == (cards_in_deck + cards_in_discard))==1){
 			testErrorCounts[2]++;
 		}
 		if (customAssert(gameTest.handCount[0] == cards_in_hand + 2) == 1) {
@@ -175,7 +174,7 @@ int main() {
 		gameTest.deck[0][0] = silver;
 		gameTest.deck[0][1] = gold;
 		cardEffect(adventurer, choice1, choice2, choice3, &gameTest, handpos, &bonus);
-		if (customAssert((gameTest.deckCount[0] + gameTest.discardCount[0]) == (cards_in_deck + cards_in_discard - 2))==1){
+		if (customAssert((gameTest.deckCount[0] + gameTest.discardCount[0]) == (cards_in_deck + cards_in_discard))==1){
 			testErrorCounts[2]++;
 		}
 		if (customAssert(gameTest.handCount[0] == cards_in_hand + 2) == 1) {
@@ -189,8 +188,8 @@ int main() {
 
 
 		int randTreasures = randomInt(3, gameTest.deckCount[0]);
-		for (int k = 0; k < numTreasures; k++) {
-			gameTest[0][k] = treasureCard[rand() % 3];
+		for (int k = 0; k < randTreasures; k++) {
+			gameTest.deck[0][k] = treasureCard[rand() % 3];
 		}
 		cardEffect(adventurer, choice1, choice2, choice3, &gameTest, handpos, &bonus);
 		//check that deck decreased by 2
@@ -230,7 +229,7 @@ int main() {
 	printf("Only one treasure card in deck errors: %d\n", testErrorCounts[1]);
 	printf("Deck contains two treasure cards: %d\n", testErrorCounts[2]);
 	printf("Deck contains random treasure cards: %d\n", testErrorCounts[3]);
-	printf("Other players hand and/or deck count errors: %d", testErrorCounts[4]);
+	printf("Other players hand and/or deck count errors: %d\n", testErrorCounts[4]);
 	printf("Change of turn error: %d\n", testErrorCounts[5]);
 
 

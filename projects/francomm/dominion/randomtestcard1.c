@@ -48,7 +48,7 @@ int randomInt(int low, int high) {
 int main() {
 
 
-	int errorCheck; handCountErr, deckCountErr, otherPlayersErr, stateChangeErr = 0;
+	int errorCheck, handCountErr, deckCountErr, otherPlayersErr, stateChangeErr = 0;
 	int randomSeed = 1000;
 	int k[10] = {adventurer, council_room, feast, gardens, mine
              , remodel, smithy, village, baron, great_hall};
@@ -57,8 +57,6 @@ int main() {
 
     int players;
     int iterationCount = 1000;
-    int output;
-    int hand_count_prev, hand_count_prev_2, deck_count_prev, deck_count_prev_2;
 
 	struct gameState gameTest;
 	struct gameState initGame;
@@ -69,7 +67,7 @@ int main() {
 	//initialize seed
 	srand(time(0));
 
-
+	otherPlayersErr = 0;
 
 	//run random tests an arbitrary number of times
 	for (int i = 0; i < iterationCount; i++) {
@@ -77,15 +75,16 @@ int main() {
 		players = randomInt(2, MAX_PLAYERS);
 		initializeGame(players, k, randomSeed, &initGame);
 		memcpy(&gameTest, &initGame, sizeof(struct gameState));
-
+		
+		gameTest.whoseTurn = 0;
 
 		for (int j = 0; j < players; j++) {
-			handCount_prev[i] = gameTest.handCount[i];
-			deckCount_prev[i] = gameTest.deckCount[i];
+			handCount_prev[j] = gameTest.handCount[j];
+			deckCount_prev[j] = gameTest.deckCount[j];
 		}
 
 		//cardeffect call
-		cardEffect(TESTCARD, choice1, choice2, choice3, &gameTest, handpos, &bonus);	
+		cardEffect(smithy, choice1, choice2, choice3, &gameTest, handpos, &bonus);	
 
 
 		//check to make sure current player recieves exactly three cards
@@ -104,12 +103,15 @@ int main() {
 
 		//check to make sure other players' hands and deck did not change
 		for (int j = 1; j < players; j++) {
-			errorCheck = customAssert(gameTest.handCount[j] == handCount_prev[i]);
-			if (errorCheck == 1) {
+	
+			errorCheck = customAssert(gameTest.handCount[j] == initGame.handCount[j]);
+			//printf("errorCheck= %d; %d, %d;\n", errorCheck, gameTest.handCount[j], initGame.handCount[j]);
+			if (errorCheck != 0) {
 				otherPlayersErr++;
 			}
-			errorCheck = customAssert(gameTest.deckCount[j] == deckCount_prev[i]);
-			if (errorCheck == 1) {
+			errorCheck = customAssert(gameTest.deckCount[j] == initGame.deckCount[j]);
+			//printf("errorCheck = %d; %d, %d;\n ", errorCheck, gameTest.handCount[j], initGame.handCount[j]);
+			if (errorCheck != 0) {
 				otherPlayersErr++;
 			}
 		}
@@ -128,7 +130,7 @@ int main() {
 		}
 
 		//check to make sure it is still player 0's turn
-		errorCheck = customAssert(gameTest.whosTurn == 0);
+		errorCheck = customAssert(gameTest.whoseTurn == 0);
 		if (errorCheck == 1) {
 			stateChangeErr++;
 		}
@@ -137,7 +139,7 @@ int main() {
 
 		//reset the initial game state
 		memset(&initGame, 0, sizeof(struct gameState));
-
+		//printf("Other players err %d", otherPlayersErr);
 	}
 
 
