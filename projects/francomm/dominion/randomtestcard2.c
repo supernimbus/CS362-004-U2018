@@ -44,11 +44,16 @@ int randomInt(int low, int high) {
 }
 
 
+/*Intended behavior of Council Room: "+4 Cards, +1 Buy, Each other player draws a card"
+*/
+
+
 
 int main() {
 
 	int randomSeed = 1000;
-	int players;
+	int testCount = 6;
+	int players, errorCheck;
 	int handSize = 5;
 	int deckSize = 10;
 	int iterationCount = 1000;
@@ -59,6 +64,12 @@ int main() {
 	
 	struct gameState gameTest;
 	struct gameState initGame;
+
+	int testErrorCounts[testCount];
+	for (int i = 0; i < testCount; i++) {
+		testErrorCounts[i] = 0;
+	}
+
 
 	//initialize seed
 	srand(time(0));
@@ -92,38 +103,67 @@ int main() {
 		cardEffect(council_room, choice1, choice2, choice3, &gameTest, handpos, &bonus);
 
 		//Test 1: check that active player's deck count decreased
-		customAssert((gameTest.deckCount[0] + 4) == deck_prev);
-
+		errorCheck = customAssert((gameTest.deckCount[0] + 4) == deck_prev);
+		if (errorCheck == 1) {
+			testErrorCounts[0]++;
+		}
 
 		//Test 2: check that active player's hadn count increased
-
+		errorCheck = customAssert(gameTest.handCount[0] == (hand_prev + 3));
+		if (errorCheck == 1) {
+			testErrorCounts[1]++;
+		}
 
 		//Test 3: check that active player gets an extra buy
+		errorCheck = customAssert((gameTest.numBuys + 1) == initGame.numBuys);
+		if (errorCheck == 1) {
+			testErrorCounts[2]++;
+		}
 
 
 		//Test 4: check that other players draw one card
+		for (int j = 1; j < players; j++) {
+			//check that deck count is now smaller by one card
+			errorCheck = customAssert((gameTest.deckCount[j] + 1) == initGame.deckCount[j]);
+
+			//check that hand size increases by one
+			errorCheck = customAssert((gameTest.handCount[j] - 1) == initGame.handCount[j]);
+
+			if (errorCheck == 1) {
+				testErrorCounts[3]++;
+			}
+
+		}
 
 
-		//Test 5: test for change of state in other players' discard and deck count
-
+		//Test 5: test for change of state in other players' discard
+		for (int j = 0; j < players; j++) {
+			errorCheck = customAssert(gameTest.discardCount[j] == initGame.discardCount[j]);
+			if (errorCheck == 1) {
+				testErrorCounts[4]++;
+			}
+		}
 
 
 		//Test 6: test that it is still player 0's turn.
-		customAssert(gameTest.whosTurn == 0);
+		errorCount = customAssert(gameTest.whosTurn == 0);
+		if (errorCheck == 1) {
+			testErrorCounts[5]++;
+		}
 
-
+		//reset the initial game state
+		memset(&initGame, 0, sizeof(struct gameState));         
 
 	}
 
 
-
-
-
-
-
-
-
-
+	printf("************Random Testing of %s summary: *******************\n", TESTCARD);
+	printf("Active player deck count errors: %d\n", testErrorCounts[0]);
+	printf("Active player hand count errors: %d\n", testErrorCounts[1]);
+	printf("Active player extra buy errors: %d\n", testErrorCounts[2]);
+	printf("Other players hand and/or deck count errors: %d", testErrorCounts[3]);
+	printf("Discard pile errors: %d\n", testErrorCounts[4]);
+	printf("Change of turn error: %d\n", testErrorCounts[5]);
 
 	return 0;
 }
