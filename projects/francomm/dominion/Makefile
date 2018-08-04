@@ -36,6 +36,7 @@ player: player.c interface.o
 all: playdom player unitTest1 unitTest2 unitTest3 unitTest4 cardTest1 cardTest2 cardTest3 cardTest4
 
 
+<<<<<<< HEAD
 unitTest1: unittest1.c dominion.o rngs.o
 	gcc -o unitTest1 -g unittest1.c dominion.o rngs.o $(CFLAGS)
 
@@ -59,10 +60,21 @@ cardTest3: cardtest3.c dominion.o rngs.o
 
 cardTest4: cardtest4.c dominion.o rngs.o
 	gcc -o cardTest4 -g cardtest4.c dominion.o rngs.o $(CFLAGS)
+=======
+random_cardTest1: randomtestcard1.c dominion.o rngs.o
+	gcc -o cardTest1 -g randomtestcard1.c dominion.o rngs.o $(CFLAGS)
+
+random_cardTest2: randomtestcard2.c dominion.o rngs.o
+	gcc -o cardTest2 -g randomtestcard2.c dominion.o rngs.o $(CFLAGS)
+
+random_cardTest3: randomtestadventurer.c dominion.o rngs.o
+	gcc -o cardTest3 -g randomtestadventurer.c dominion.o rngs.o $(CFLAGS)
+>>>>>>> 4a890388305bf0b7e936b1274aafde2e747243c7
 
 
 
 unittestresults: unitTest1 unitTest2 unitTest3 unitTest4 cardTest1 cardTest2 cardTest3 cardTest4
+<<<<<<< HEAD
 	echo -e "Result for running dominion tests (Assignment 3):\n" > unittestresults.out
 	./unitTest1 >> unittestresults.out	
 	./unitTest2 >> unittestresults.out
@@ -72,6 +84,14 @@ unittestresults: unitTest1 unitTest2 unitTest3 unitTest4 cardTest1 cardTest2 car
 	./cardTest2 >> unittestresults.out
 	./cardTest3 >> unittestresults.out
 	./cardTest4 >> unittestresults.out
+=======
+	echo -e "Result for running random card tests (Assignment 4):\n" > unittestresults.out
+	
+	./cardTest1 >> unittestresults.out
+	./cardTest2 >> unittestresults.out
+	./cardTest3 >> unittestresults.out
+
+>>>>>>> 4a890388305bf0b7e936b1274aafde2e747243c7
 	gcov -b -u dominion.c >> unittestresults.out
 	cat dominion.c.gcov >> unittestresults.out
 
