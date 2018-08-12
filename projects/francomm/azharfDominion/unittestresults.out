@@ -1,0 +1,2082 @@
+Result for running dominion tests (Assignment 3):
+
+******TESTING updateCoins() ******
+Test player 0 with 1 treasure card(s) and 0 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 0, expected = 0
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 1, expected = 1
+TEST PASSED!
+G.coins = 1, expected = 1
+TEST PASSED!
+G.coins = 2, expected = 2
+TEST PASSED!
+Test player 0 with 1 treasure card(s) and 1 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 2, expected = 2
+TEST PASSED!
+G.coins = 2, expected = 2
+TEST PASSED!
+G.coins = 3, expected = 3
+TEST PASSED!
+Test player 0 with 1 treasure card(s) and 2 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 3, expected = 3
+TEST PASSED!
+G.coins = 3, expected = 3
+TEST PASSED!
+G.coins = 4, expected = 4
+TEST PASSED!
+Test player 0 with 1 treasure card(s) and 3 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 4, expected = 4
+TEST PASSED!
+G.coins = 4, expected = 4
+TEST PASSED!
+G.coins = 5, expected = 5
+TEST PASSED!
+Test player 0 with 1 treasure card(s) and 4 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 6, expected = 6
+TEST PASSED!
+Test player 0 with 1 treasure card(s) and 5 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+Test player 0 with 1 treasure card(s) and 6 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+Test player 0 with 1 treasure card(s) and 7 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+Test player 0 with 1 treasure card(s) and 8 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+Test player 0 with 1 treasure card(s) and 9 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+Test player 0 with 1 treasure card(s) and 10 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 0 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 0, expected = 0
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 3, expected = 3
+TEST PASSED!
+G.coins = 4, expected = 4
+TEST PASSED!
+G.coins = 5, expected = 5
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 1 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 4, expected = 4
+TEST PASSED!
+G.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 6, expected = 6
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 2 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 3 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 4 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 5 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 6 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 7 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 8 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 9 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+Test player 0 with 2 treasure card(s) and 10 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 0 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 0, expected = 0
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 4, expected = 4
+TEST PASSED!
+G.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 1 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 2 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 3 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 4 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 5 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 6 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 7 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 8 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 17, expected = 17
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 9 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 18, expected = 18
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 16, expected = 16
+TEST PASSED!
+Test player 0 with 3 treasure card(s) and 10 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 19, expected = 19
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+G.coins = 17, expected = 17
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 0 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 0, expected = 0
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 1 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 2 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 3 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 4 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 5 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 17, expected = 17
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 6 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 18, expected = 18
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 16, expected = 16
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 7 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 19, expected = 19
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+G.coins = 17, expected = 17
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 8 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 20, expected = 20
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 16, expected = 16
+TEST PASSED!
+G.coins = 18, expected = 18
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 9 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 17, expected = 17
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 21, expected = 21
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 15, expected = 15
+TEST PASSED!
+G.coins = 17, expected = 17
+TEST PASSED!
+G.coins = 19, expected = 19
+TEST PASSED!
+Test player 0 with 4 treasure card(s) and 10 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 18, expected = 18
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 22, expected = 22
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 16, expected = 16
+TEST PASSED!
+G.coins = 18, expected = 18
+TEST PASSED!
+G.coins = 20, expected = 20
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 0 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 0, expected = 0
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 1 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 2 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 17, expected = 17
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 3 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 18, expected = 18
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 4 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 19, expected = 19
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 16, expected = 16
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 5 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 20, expected = 20
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 17, expected = 17
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 6 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 21, expected = 21
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+G.coins = 18, expected = 18
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 7 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 17, expected = 17
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 22, expected = 22
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 16, expected = 16
+TEST PASSED!
+G.coins = 19, expected = 19
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 8 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 18, expected = 18
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 23, expected = 23
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 15, expected = 15
+TEST PASSED!
+G.coins = 17, expected = 17
+TEST PASSED!
+G.coins = 20, expected = 20
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 9 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 19, expected = 19
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 24, expected = 24
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 16, expected = 16
+TEST PASSED!
+G.coins = 18, expected = 18
+TEST PASSED!
+G.coins = 21, expected = 21
+TEST PASSED!
+Test player 0 with 5 treasure card(s) and 10 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 20, expected = 20
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 25, expected = 25
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 17, expected = 17
+TEST PASSED!
+G.coins = 19, expected = 19
+TEST PASSED!
+G.coins = 22, expected = 22
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 0 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 0, expected = 0
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 1, expected = 1
+TEST PASSED!
+G.coins = 1, expected = 1
+TEST PASSED!
+G.coins = 2, expected = 2
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 1 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 2, expected = 2
+TEST PASSED!
+G.coins = 2, expected = 2
+TEST PASSED!
+G.coins = 3, expected = 3
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 2 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 3, expected = 3
+TEST PASSED!
+G.coins = 3, expected = 3
+TEST PASSED!
+G.coins = 4, expected = 4
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 3 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 4, expected = 4
+TEST PASSED!
+G.coins = 4, expected = 4
+TEST PASSED!
+G.coins = 5, expected = 5
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 4 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 6, expected = 6
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 5 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 6 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 7 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 8 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 9 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+Test player 1 with 1 treasure card(s) and 10 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 0 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 0, expected = 0
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 3, expected = 3
+TEST PASSED!
+G.coins = 4, expected = 4
+TEST PASSED!
+G.coins = 5, expected = 5
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 1 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 4, expected = 4
+TEST PASSED!
+G.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 6, expected = 6
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 2 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 3 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 4 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 5 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 6 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 7 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 8 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 9 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+Test player 1 with 2 treasure card(s) and 10 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 0 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 0, expected = 0
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 4, expected = 4
+TEST PASSED!
+G.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 1 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 5, expected = 5
+TEST PASSED!
+G.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 2 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 3 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 4 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 5 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 6 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 7 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 8 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 17, expected = 17
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 9 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 18, expected = 18
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 16, expected = 16
+TEST PASSED!
+Test player 1 with 3 treasure card(s) and 10 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 19, expected = 19
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+G.coins = 17, expected = 17
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 0 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 0, expected = 0
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 6, expected = 6
+TEST PASSED!
+G.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 1 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 2 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 3 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 4 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 5 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 17, expected = 17
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 6 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 18, expected = 18
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 16, expected = 16
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 7 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 19, expected = 19
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+G.coins = 17, expected = 17
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 8 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 20, expected = 20
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 16, expected = 16
+TEST PASSED!
+G.coins = 18, expected = 18
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 9 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 17, expected = 17
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 21, expected = 21
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 15, expected = 15
+TEST PASSED!
+G.coins = 17, expected = 17
+TEST PASSED!
+G.coins = 19, expected = 19
+TEST PASSED!
+Test player 1 with 4 treasure card(s) and 10 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 18, expected = 18
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 22, expected = 22
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 16, expected = 16
+TEST PASSED!
+G.coins = 18, expected = 18
+TEST PASSED!
+G.coins = 20, expected = 20
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 0 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 0, expected = 0
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 7, expected = 7
+TEST PASSED!
+G.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 1 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 1, expected = 1
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 8, expected = 8
+TEST PASSED!
+G.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 2 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 17, expected = 17
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 2, expected = 2
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 9, expected = 9
+TEST PASSED!
+G.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 3 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 18, expected = 18
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 3, expected = 3
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 10, expected = 10
+TEST PASSED!
+G.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 4 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 19, expected = 19
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 4, expected = 4
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 11, expected = 11
+TEST PASSED!
+G.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 16, expected = 16
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 5 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 20, expected = 20
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 5, expected = 5
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 12, expected = 12
+TEST PASSED!
+G.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 17, expected = 17
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 6 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 11, expected = 11
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 16, expected = 16
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 21, expected = 21
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 6, expected = 6
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 13, expected = 13
+TEST PASSED!
+G.coins = 15, expected = 15
+TEST PASSED!
+G.coins = 18, expected = 18
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 7 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 12, expected = 12
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 17, expected = 17
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 22, expected = 22
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 7, expected = 7
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 14, expected = 14
+TEST PASSED!
+G.coins = 16, expected = 16
+TEST PASSED!
+G.coins = 19, expected = 19
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 8 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 13, expected = 13
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 18, expected = 18
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 23, expected = 23
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 8, expected = 8
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 15, expected = 15
+TEST PASSED!
+G.coins = 17, expected = 17
+TEST PASSED!
+G.coins = 20, expected = 20
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 9 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 14, expected = 14
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 19, expected = 19
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 24, expected = 24
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 9, expected = 9
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 16, expected = 16
+TEST PASSED!
+G.coins = 18, expected = 18
+TEST PASSED!
+G.coins = 21, expected = 21
+TEST PASSED!
+Test player 1 with 5 treasure card(s) and 10 bonus.
+TEST PASSED!
+Test case 1: hand only contains copper coinsG.coins = 15, expected = 15
+TEST PASSED!
+Test case 2: hand only contains silver coinsG.coins = 20, expected = 20
+TEST PASSED!
+Test case 3: hand only contains gold coinsG.coins = 25, expected = 25
+TEST PASSED!
+Test case 4: hand contains no coinsG.coins = 10, expected = 10
+TEST PASSED!
+Test case 5: hand contains copper and silver coinsG.coins = 17, expected = 17
+TEST PASSED!
+G.coins = 19, expected = 19
+TEST PASSED!
+G.coins = 22, expected = 22
+TEST PASSED!
+******
+Tests failed = 0
+*************END OF TEST RESULTS******************
+TEST PASSED!
+******TESTING initializeGame() ******
+Testing to check if maximum number of player threshold works correctly...
+TEST PASSED!
+Testing to check if minimum number of players thresholds work correctly...
+TEST PASSED!
+Testing to check number of players was set correctly...
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Testing to check if first player has the next turn after initializeGame()
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Testing to check if decks were initialized correctly... (7 coppers, 3 estates)
+Testing with 2 players 
+TEST PASSED!
+Testing with 3 players 
+TEST PASSED!
+Testing with 4 players 
+TEST PASSED!
+Testing starting ammounts...
+Testing with 2 players... 
+Checking starting ammounts of great_hall and gardens cards... (2 players) 
+TEST PASSED!
+Checking starting ammounts of remaining cards... (2 players)
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Testing with 3 players... 
+Checking starting ammounts of great_hall and gardens cards... (3 players) 
+TEST PASSED!
+Checking starting ammounts of remaining cards... (3 players)
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Testing with 4 players... 
+Checking starting ammounts of great_hall and gardens cards... (4 players) 
+TEST PASSED!
+Checking starting ammounts of remaining cards... (4 players)
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Testing to make sure that embargo tokens are set to 0 for each pile...
+Testing with 2 players 
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Testing with 3 players 
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Testing with 4 players 
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Testing to make sure that each player has an initialized hand...
+Testing with 2 players 
+TEST PASSED!
+******TEST FAILED!******
+Testing with 3 players 
+TEST PASSED!
+******TEST FAILED!******
+******TEST FAILED!******
+Testing with 4 players 
+TEST PASSED!
+******TEST FAILED!******
+******TEST FAILED!******
+******TEST FAILED!******
+Testing to check that player 0 is set to go first...
+Testing with 2 players 
+TEST PASSED!
+Testing with 3 players 
+TEST PASSED!
+Testing with 4 players 
+TEST PASSED!
+ERROR COUNT = 6
+*************END OF TEST RESULTS******************
+******TESTING isGameOver() ******
+Checking with new initialized game...
+TEST PASSED!
+Checking with empty province pile (game should be over)...
+TEST PASSED!
+Checking with one pile empty (game should not be over)...
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Checking with one empty coin pile (game should not be over)...
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Checking with two piles empty (game should not be over)...
+TEST PASSED!
+Checking with three piles empty (game should be over)...
+TEST PASSED!
+Error count: 0
+*************END OF TEST RESULTS******************
+******TESTING whosTurn() ******
+Check with fresly initialized game + varying number of players...
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Checking with two players (setting second player to have next turn)...
+TEST PASSED!
+Checking with three to MAX_PLAYERS...
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+Checking next turn using endTurn()...
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+TEST PASSED!
+ERROR COUNT: 0
+*************END OF TEST RESULTS******************
+----------------- Testing Card: smithy ----------------
+Checking to make sure that current player recieves exactly three cards.
+hand count = 8, expected = 7
+******TEST FAILED!******
+Checking to make sure that current player's deck count decreases by 3 cards...
+******TEST FAILED!******
+Checking to make sure cards in player 1's deck did not change.
+TEST PASSED!
+Checking to make sure cards in player 1's hand did not change.
+second player's hand count = 0, expected 0
+TEST PASSED!
+Checking to make sure number of buys did not change.
+TEST PASSED!
+Checking to make sure number of actions did not change.
+TEST PASSED!
+Checking to make sure it is still player 0's turn.
+TEST PASSED!
+Error Count: 2
+*************END OF TEST RESULTS******************
+TEST PASSED!
+----------------- Testing Card: adventurer ----------------
+Checking case in which the player has less than 2 Treasure cards in his deck....
+Printing hand contents before test:
+8 8 8 8 8 
+Printing deck contents before test:
+8 8 8 8 8 
+Printing hand contents after test:
+
+Printing deck contetns after test:
+
+Checking to make sure that hand size did not change...
+******TEST FAILED!******
+Checking to make sure that deck size is zero...
+TEST PASSED!
+Case 1A: deck only conains one treasure card.
+Checking to make sure that deck size is zero...
+TEST PASSED!
+Checking to make sure that hand size increased by 1...
+TEST PASSED!
+Case 2A: Deck contains exactly 2 treasure cards.
+Case2A.1: 1 Copper, 1 Sliver.
+checking to make sure hand size increased by 2 and deck size + discard size decreased by 2...
+Checking deckCount + discardCount delta...
+TEST PASSED!
+Checking handCount...
+TEST PASSED!
+Case2A.2: 1 Sliver, 1 Gold.
+checking to make sure hand size increased by 2 and deck size + discard size decreased by 2...
+Checking deckCount + discardCount delta...
+TEST PASSED!
+Checking handCount...
+TEST PASSED!
+checking that state does not change for player 1 when player 0 plays card...
+TEST PASSED!
+TEST PASSED!
+checking to make sure it is still player 0's turn
+TEST PASSED!
+-------------------End of Test------------------------------------
+TEST PASSED!
+----------------- Testing Card: council_room ----------------
+Checking that player gets 4 cards...
+Make sure that deck decreased in size by 4 cards... 
+Prev deck size: 5, current deck size: 0
+******TEST FAILED!******
+Check that hand size increased by 3...
+Prev hand size: 5, current hand size: 9
+******TEST FAILED!******
+Checking that player gets extra buy...
+******TEST FAILED!******
+Checking that other player draws one card (2 players)
+TEST PASSED!
+CChecking that other players draw one card (3 players)
+TEST PASSED!
+Checking that player deck size goes down by one...
+Deck size was greater than 0...
+TEST PASSED!
+Testing to make sure it is still player 0's turn...
+TEST PASSED!
+Error count: 3
+-------------------End of Test------------------------------------
+----------------- Testing Card: great_hall ----------------
+Test that the number of actions has increased by 1.
+TEST PASSED!
+Test that the number of cards drawn after playing card is 1.
+TEST PASSED!
+Test that hand count did not increase or decrease.
+TEST PASSED!
+Test that the number of played cards by player0 increased by 1.
+TEST PASSED!
+Test that it is still player 0's turn.
+TEST PASSED!
+-------------------End of Test------------------------------------
+File 'dominion.c'
+No executable lines
+No branches
+No calls
+Removing 'dominion.c.gcov'
+
